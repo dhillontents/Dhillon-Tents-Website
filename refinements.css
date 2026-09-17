@@ -1,0 +1,27 @@
+/* Dhillon Tents: clear typography and readable controls on every surface. */
+:root{--sans:"Avenir Next","Segoe UI",Arial,sans-serif;--display:var(--sans)}
+h1,h2,h3,h4{font-family:var(--sans);font-weight:700;letter-spacing:-.035em}
+h1 em,h2 em,h3 em{font-family:inherit;font-style:normal;font-weight:inherit;letter-spacing:inherit}
+.hero h1{font-weight:750;line-height:1.04;font-size:clamp(2.7rem,5.2vw,4.9rem);max-width:13ch;letter-spacing:-.045em}
+.hero h1 em{color:var(--gold);font-weight:750}
+.hero__copy>p{max-width:46ch;line-height:1.7}
+.hero__meta em{font-style:normal}
+.page-title{font-weight:700}
+.form-card{color:var(--ink);color-scheme:light}
+.section--night .form-card p{color:var(--muted-foreground)}
+.form-card .form-grid label{color:#132b37;font-size:.9rem}
+.form-card :is(input,select,textarea){color:#132b37;background:#fff;-webkit-text-fill-color:#132b37;font-size:1rem}
+.form-card :is(input,textarea)::placeholder{color:#687a84;opacity:1;-webkit-text-fill-color:#687a84}
+.form-card .text-link{color:#173b49}
+.form-card .btn-outline{color:#173b49;border-color:#173b49}
+.section--night .form-card .form-status{color:#215844}
+.form-card .form-status a{font-weight:700;text-decoration:underline}
+.form-card :is(input,select,textarea):focus-visible{outline:3px solid #173b49;outline-offset:2px}
+.form-card .contact-quote-summary{color:#132b37}
+.contact-layout-summary{font-size:.875rem;margin-bottom:20px;color:#586972}
+.rental-sizes{display:flex;flex-wrap:wrap;gap:9px;margin-top:18px}
+.rental-sizes a{border:1px solid var(--line);padding:8px 12px;border-radius:6px;font-size:.875rem;font-weight:600}
+.rental-sizes a:hover{background:var(--soft)}
+@media(max-width:600px){.hero h1{font-size:clamp(2.6rem,10.8vw,3.6rem)}.form-card{padding:22px 18px}.form-grid{grid-template-columns:1fr}}
+
+.rental-size-guide{margin:24px 0 30px;padding:22px;border:1px solid var(--line);border-radius:8px;background:#f5f8f9}.rental-size-guide h2{font-size:1.15rem;margin-bottom:8px}.rental-size-guide p{font-size:.9375rem;color:var(--muted)}
