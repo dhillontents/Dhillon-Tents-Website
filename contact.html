@@ -33,7 +33,7 @@
 
 <script type="application/ld+json">{"@context":"https://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"Home","item":"https://dhillontents.com/"},{"@type":"ListItem","position":2,"name":"Request a Tent & Event Rental Quote","item":"https://dhillontents.com/contact.html"}]}</script>
 <script type="application/ld+json">{"@context":"https://schema.org","@type":"ContactPage","@id":"https://dhillontents.com/contact.html#page","name":"Contact Dhillon Tents","url":"https://dhillontents.com/contact.html","about":{"@id":"https://dhillontents.com/#business"}}</script><link rel="stylesheet" href="page-backgrounds.css?v=1">
-</head><body id="top"><a class="skip-link" href="#main">Skip to content</a>
+<link rel="stylesheet" href="contact-delivery.css?v=1"></head><body id="top"><a class="skip-link" href="#main">Skip to content</a>
 <header class="site-header"><div class="wrap header-inner">
  <a class="brand" href="index.html" aria-label="Dhillon Tents home"><img src="assets/dhillon-logo.png" alt="Dhillon Tents" width="600" height="300"></a>
  <nav class="site-nav" id="site-nav" aria-label="Main"><ul><li><a href="rentals.html">Rentals</a></li><li><a href="tent-size-planner.html">Tent planner</a></li><li><a href="gallery.html">Gallery</a></li><li><a href="gta-tent-rentals.html">Areas</a></li><li><a href="about.html">About</a></li><li><a href="faq.html">FAQs</a></li><li><a href="contact.html" aria-current="page">Contact</a></li><li class="mobile-book-link"><a href="book-now.html">Book now</a></li></ul></nav>
@@ -51,24 +51,24 @@
       </div>
     </div>
     <div class="form-card">
-      <div class="contact-quote-summary"><button class="text-link" type="button" data-open-quote>Review your quote list <span class="quote-count">0</span></button><p data-quote-summary></p></div><p class="contact-layout-summary" data-layout-summary hidden></p><form data-quote-form>
+      <div class="contact-quote-summary"><button class="text-link" type="button" data-open-quote>Review your quote list <span class="quote-count">0</span></button><p data-quote-summary></p></div><p class="contact-layout-summary" data-layout-summary hidden></p><form data-quote-form method="post" action="/api/contact"><div class="contact-trap" aria-hidden="true"><label for="f-website">Leave this field blank</label><input id="f-website" name="website" tabindex="-1" autocomplete="off"></div>
   <div class="form-grid">
-    <div><label for="f-name-main">Your name</label><input id="f-name-main" name="name" autocomplete="name" required></div>
+    <div><label for="f-name-main">Your name</label><input id="f-name-main" name="name" autocomplete="name" maxlength="120" required></div>
     <div><label for="f-phone-main">Phone</label><input id="f-phone-main" name="phone" type="tel" autocomplete="tel"></div>
     <div><label for="f-date-main">Event date</label><input id="f-date-main" name="date" type="date"></div>
     <div><label for="f-guests-main">Number of guests</label><input id="f-guests-main" name="guests" type="number" min="1" inputmode="numeric" placeholder="e.g. 60"></div>
     <div><label for="f-type-main">What are we celebrating?</label><select id="f-type-main" name="eventType"><option>Wedding</option><option>Birthday</option><option>Engagement or shower</option><option>Backyard party</option><option>Corporate event</option><option>Community event</option><option>Other celebration</option></select></div>
     <div><label for="f-loc-main">Event city or venue</label><input id="f-loc-main" name="location" placeholder="e.g. Brampton backyard"></div>
-    <div class="full"><label for="f-email-main">Email</label><input id="f-email-main" name="email" type="email" autocomplete="email"></div>
-    <div class="full"><label for="f-notes-main">Anything else we should know?</label><textarea id="f-notes-main" name="notes" placeholder="Surface type, access, catering, timing…"></textarea></div>
+    <div class="full"><label for="f-email-main">Email</label><input id="f-email-main" name="email" type="email" autocomplete="email" maxlength="254" required></div>
+    <div class="full"><label for="f-notes-main">Anything else we should know?</label><textarea id="f-notes-main" name="notes" maxlength="3000" placeholder="Surface type, access, catering, timing…"></textarea></div>
   </div>
   <div class="form-actions">
-    <button class="btn btn-blue" type="submit" value="whatsapp"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M21 11.5a8.4 8.4 0 0 1-9 8.5 8.9 8.9 0 0 1-4-.9L3 21l1.9-5a8.4 8.4 0 0 1-.9-4 8.4 8.4 0 0 1 8.5-9 8.4 8.4 0 0 1 8.5 8.5z"/></svg>Send on WhatsApp</button>
-    <button class="btn btn-outline" type="submit" value="email">Open an email draft</button>
+    <button class="btn btn-blue" type="submit" value="send">Send quote request</button>
+    <button class="btn btn-outline" type="submit" value="whatsapp"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M21 11.5a8.4 8.4 0 0 1-9 8.5 8.9 8.9 0 0 1-4-.9L3 21l1.9-5a8.4 8.4 0 0 1-.9-4 8.4 8.4 0 0 1 8.5-9 8.4 8.4 0 0 1 8.5 8.5z"/></svg>Send on WhatsApp</button>
   </div>
-  <p class="form-note">Your rental list is attached automatically. We confirm pricing and availability before anything is reserved.</p>
-  <p class="form-status" data-form-status hidden></p>
-</form>
+  <p class="form-note">Your rental list is included automatically. We use your details to respond to this inquiry. <a href="privacy-policy.html">Privacy policy</a>. Pricing and availability are confirmed before anything is reserved.</p>
+  <p class="form-status" data-form-status role="status" aria-live="polite" aria-atomic="true" hidden></p>
+<noscript><p>Please enable JavaScript to send this form, or <a href="mailto:dhillontents@gmail.com">email Dhillon Tents</a>.</p></noscript></form>
     </div>
   </div>
 </section></main><footer class="site-footer">
@@ -134,7 +134,7 @@
     <p class="form-note">Sending a request does not reserve equipment. We confirm availability and pricing with you first.</p>
   </div>
 </aside><script src="catalog.js?v=11"></script>
-<script src="app.js?v=11"></script>
+<script src="contact-delivery.js?v=1"></script><script src="app.js?v=12"></script>
 <script src="motion.js?v=11"></script>
 <script src="booking.js?v=11"></script>
 <script>window.booqableOptions={company:"f3a7e510-7d0f-4a6d-98d0-5e0a229132d8"};</script>

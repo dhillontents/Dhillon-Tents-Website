@@ -1,0 +1,52 @@
+DHILLON TENTS - DIRECT CONTACT FORM SETUP (VERCEL + RESEND)
+
+This package includes the code. It does not include credentials, change your accounts or deploy to production. Complete these steps before using direct email sending.
+
+1. Create a Resend account at https://resend.com/ and sign in.
+
+2. In Resend, open Domains and add a sending subdomain of a domain you own. Example ONLY: notify.dhillontents.ca, if you own dhillontents.ca. If your actual domain is .com, use that instead. You cannot verify gmail.com or vercel.app as your own domain. Sending and receiving are different: the messages will still go to dhillontents@gmail.com.
+
+3. Copy the DNS records shown by Resend into the DNS dashboard that manages your domain. Use the exact host/name, type, value and priority provided. Add the records for sending; incoming email routing is not needed. Keep your existing website records and existing mail records. Return to Resend and check verification until the domain shows Verified. This can take time to propagate.
+
+4. In Resend, open API Keys and create a key named Dhillon Tents Contact. Choose sending-only permission and restrict it to the verified domain when available. Copy the key directly into Vercel in the next step. Do not upload it to GitHub, put it in app.js or share it in chat.
+
+5. Open Vercel > your dhillon-tents-website project > Settings > Environment Variables (or Environment Variables in the project sidebar). Add:
+
+   Name: RESEND_API_KEY
+   Value: the secret key created in Resend
+   Type: Secret, if the option appears
+   Environments: Production and Preview
+
+   Name: RESEND_FROM_EMAIL
+   Value example: Dhillon Tents <quotes@notify.dhillontents.ca>
+   Type: Config, if the option appears
+   Environments: Production and Preview
+
+   The domain after @ must exactly match the domain/subdomain you verified. This is a sending address, so you do not need to buy a mailbox for it. Do not enter dhillontents@gmail.com as the sender. The recipient is already fixed to dhillontents@gmail.com in api/contact.js. Reply-To uses the customer's entered email.
+
+6. Extract the complete ZIP. Open your GitHub repository and upload the CONTENTS of the dhillon-tents folder at the existing repository root, replacing matching files. Include the new api folder, package.json and vercel.json alongside index.html. Do not upload just the ZIP or put another dhillon-tents folder around the website files. Commit the changes to main.
+
+7. Vercel should deploy the commit. The included vercel.json uses the Other framework, no build command and output directory '.'. The root directory should be the folder containing index.html AND api/. Wait until the deployment is Ready. If you add or change environment variables after a deployment, redeploy; old deployments do not get updated values.
+
+8. Open the deployed website over HTTPS, add a tent and chairs to your quote, then go to Contact. Fill in a test name, a valid email address you can access, the event details and a note saying TEST. Click Send quote request once. You should see progress followed by a submitted message, with no email app opening. Check dhillontents@gmail.com, including Spam. Verify the quantities and planner notes in the message. Click Reply and confirm it addresses the customer's test email.
+
+9. Check a second submission on your phone. A submitted message means the email provider accepted the request; confirm arrival in Gmail as well. This sends an inquiry, not a Booqable reservation or payment. The quote list is separate from the Booqable cart.
+
+TROUBLESHOOTING
+- "Online sending is not ready": verify both environment variables and redeploy.
+- "Could not submit": check the Vercel project's runtime Logs and Resend's email/log dashboard. Confirm the verified sender domain, sending permission, account approval status if requested by Resend, and account quota. Never paste the API key into screenshots.
+- "Online sending is unavailable": make sure api/contact.js was uploaded at the repository root and that Vercel built a function for /api/contact.
+- 405 when opening /api/contact in a browser: expected; the endpoint only accepts POST from the form.
+- Accepted but no inbox email: check Spam and the Resend delivery status. Acceptance is not a delivery guarantee.
+- Network trouble: the form and quote remain saved in this browser tab. Retry or use WhatsApp. Retries reuse a request ID to reduce duplicate emails.
+
+VERIFICATION
+25 pages passed static checks. 21 automated tests passed, including server error/validation/recipient/retry cases with mocked email sending. A DOM integration check covered the real contact markup, quotes, planner notes, feedback, failure persistence and duplicate submission handling. No live email was sent, and this revision has not been deployed or visually checked in a desktop/mobile browser. Complete step 8 and 9 before relying on it for customers.
+
+Basic spam controls include a honeypot, same-origin browser check and a process-local burst limit. A process-local limit is not shared across Vercel instances. Use a Vercel Firewall rate-limit rule or managed challenge if abuse occurs. No database is included; successful requests are delivered by email. Resend and Vercel plan limits still apply.
+
+OFFICIAL REFERENCES
+https://resend.com/docs/dashboard/domains/introduction
+https://resend.com/docs/dashboard/api-keys/introduction
+https://resend.com/docs/send-with-vercel-functions
+https://vercel.com/docs/environment-variables
