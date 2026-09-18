@@ -1,0 +1,26 @@
+.rental-guide .guide-hero{padding-block:clamp(42px,6vw,80px)}
+.rental-guide .guide-hero h1{font-size:clamp(2.2rem,4.3vw,3.65rem);max-width:20ch}
+.rental-guide .guide-photo{margin:0;min-width:0}
+.rental-guide .guide-photo img{width:100%;height:auto;max-height:540px;object-fit:contain;background:var(--soft);border-radius:8px}
+.rental-guide .guide-photo figcaption{margin-top:10px;color:var(--muted-foreground);font-size:.85rem}
+.rental-guide .guide-body{max-width:900px}
+.rental-guide .guide-block+.guide-block{margin-top:42px}
+.rental-guide .guide-block h2{font-size:clamp(1.6rem,3vw,2.2rem);margin-bottom:18px}
+.rental-guide .guide-block h3{font-size:1.2rem;margin:22px 0 10px}
+.rental-guide .guide-block p,.rental-guide .guide-block li{max-width:75ch}
+.rental-guide .guide-block a:not(.btn),.rental-guide .guide-related a{text-decoration:underline;text-underline-offset:4px}
+.rental-guide .guide-block li+li{margin-top:10px}
+.rental-guide .guide-block ul,.rental-guide .guide-block ol{padding-left:24px}
+.rental-guide .guide-table-wrap{overflow-x:auto;border:1px solid var(--line);border-radius:8px;margin:20px 0;background:#fff}
+.rental-guide .guide-table-wrap:focus-visible{outline-offset:4px}
+.rental-guide table{width:100%;border-collapse:collapse;min-width:580px;font-size:.92rem}
+.rental-guide caption{text-align:left;padding:18px;font-weight:700;color:var(--ink)}
+.rental-guide th,.rental-guide td{text-align:left;padding:13px 16px;border-top:1px solid var(--line)}
+.rental-guide thead{background:var(--primary);color:#fff}
+.rental-guide tbody tr:nth-child(even){background:var(--soft)}
+.rental-guide .guide-note-text{font-size:.9rem;color:var(--muted-foreground)}
+.rental-guide .guide-cards{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:20px;list-style:none;padding:0}
+.rental-guide .guide-cards li{margin:0!important;padding:26px;border:1px solid var(--line);border-radius:8px;background:#fff}
+.rental-guide .guide-cards h3{margin:0 0 12px}
+.rental-guide .guide-related{display:flex;flex-wrap:wrap;gap:16px 28px;list-style:none;padding:0;margin-top:24px}
+@media(max-width:700px){.rental-guide .guide-cards{grid-template-columns:1fr}.rental-guide .guide-hero .split{gap:26px}.rental-guide .guide-photo img{max-height:400px}.rental-guide .hero__cta{display:flex;flex-wrap:wrap}.rental-guide .guide-table-wrap{max-width:100%}}

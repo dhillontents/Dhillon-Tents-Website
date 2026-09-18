@@ -37,3 +37,20 @@
  .photo-carousel__hint{display:block}
 }
 @media(prefers-reduced-motion:reduce){.photo-carousel *{transition:none!important;animation:none!important;scroll-behavior:auto!important}}
+
+/* Original-resolution carousel photos; homepage retains its light sections. */
+.photo-carousel{max-width:1080px;margin:32px auto 0}
+.photo-carousel__frame{aspect-ratio:4/3;min-height:0;max-height:760px;border:1px solid #ffffff38;background:#0b2028}
+.photo-carousel .tent-scene__image{inset:0 0 100px}
+.photo-carousel .tent-scene__image img{object-fit:cover;object-position:center 50%;transform:none!important}
+.photo-carousel .tent-scene__image img[src*="farmer-market"]{object-position:center 43%}
+.photo-carousel .tent-scene__image img[src*="20x40-event"]{object-position:center 48%}
+.photo-carousel .photo-carousel__slide figcaption{height:100px;box-sizing:border-box;padding:20px 30px;background:#0b2028;align-items:center}
+.photo-carousel__arrow{top:calc(50% - 50px)}
+@media(max-width:700px){
+ .photo-carousel__frame{aspect-ratio:3/4;max-height:none}
+ .photo-carousel .tent-scene__image{inset:0 0 126px}
+ .photo-carousel .tent-scene__image img{object-fit:contain;object-position:center}
+ .photo-carousel .photo-carousel__slide figcaption{height:126px;padding:16px 20px;gap:8px;align-items:start;justify-content:center}
+ .photo-carousel__arrow{top:calc(50% - 63px)}
+}

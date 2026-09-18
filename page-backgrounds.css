@@ -1,0 +1,22 @@
+/* A photo treatment for About and Contact, independent of the homepage. */
+#about.page-section {
+  background: linear-gradient(100deg,rgba(7,27,35,.94) 0%,rgba(7,27,35,.88) 50%,rgba(7,27,35,.58) 100%),url('assets/40x40-wedding-setup-original.jpeg') center/cover no-repeat;
+  color: #fff;
+}
+#about .eyebrow { color: #dec58d; }
+#about :is(.lede,.value-list p) { color: #e2ebee; }
+#about .value-list li { border-color: #ffffff38; }
+#about .text-link { color: #dec58d; }
+#about .split>div>img { border-radius: 8px; border: 1px solid #ffffff38; box-shadow: 0 16px 48px #071b3559; }
+#request.page-section {
+  background: linear-gradient(110deg,rgba(7,27,35,.91),rgba(7,27,35,.75)),url('assets/20x40-tent-lakeside-original.jpg') center/cover no-repeat;
+}
+#request .contact-cards a { background: #112e39e8; border-color: #ffffff40; }
+#request .contact-cards a:hover { background: #214754; }
+#request .form-card { background: #fff; color: #132b37; box-shadow: 0 16px 60px #0003; }
+#request .form-card :is(.form-note,.contact-layout-summary,[data-quote-summary]) { color: #586972; }
+#about :focus-visible,#request .contact-cards :focus-visible { outline: 3px solid #dec58d; outline-offset: 4px; }
+@media(max-width:700px) {
+  #about.page-section { background-image:linear-gradient(#071b35df,#071b35ed),url('assets/40x40-wedding-setup-original.jpeg'); }
+  #request.page-section { background-image:linear-gradient(#071b35dc,#071b35ef),url('assets/20x40-tent-lakeside-original.jpg'); }
+}

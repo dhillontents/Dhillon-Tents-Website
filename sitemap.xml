@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9" xmlns:image="http://www.google.com/schemas/sitemap-image/1.1">
   <url><loc>https://dhillontents.com/</loc></url>
   <url><loc>https://dhillontents.com/rentals.html</loc></url>
   <url><loc>https://dhillontents.com/tent-size-planner.html</loc></url>
-  <url><loc>https://dhillontents.com/gallery.html</loc></url>
+  <url><loc>https://dhillontents.com/gallery.html</loc><image:image><image:loc>https://dhillontents.com/assets/20x60-backyard-wedding-setup-original.jpg</image:loc></image:image><image:image><image:loc>https://dhillontents.com/assets/40x40-wedding-setup-original.jpeg</image:loc></image:image><image:image><image:loc>https://dhillontents.com/assets/20x20-birthday-setup-original.jpg</image:loc></image:image><image:image><image:loc>https://dhillontents.com/assets/20x40-event-setup-original.jpg</image:loc></image:image><image:image><image:loc>https://dhillontents.com/assets/farmer-market-event-setup-original.jpg</image:loc></image:image><image:image><image:loc>https://dhillontents.com/assets/20x40-tent-lakeside-original.jpg</image:loc></image:image><image:image><image:loc>https://dhillontents.com/assets/20x30-backyard-weddingsetup.webp</image:loc></image:image><image:image><image:loc>https://dhillontents.com/assets/20x20-driveway-setup.webp</image:loc></image:image><image:image><image:loc>https://dhillontents.com/assets/20x40-wedding-setup.webp</image:loc></image:image><image:image><image:loc>https://dhillontents.com/assets/20x40-tent-setup.webp</image:loc></image:image><image:image><image:loc>https://dhillontents.com/assets/20x60-event-setup.webp</image:loc></image:image><image:image><image:loc>https://dhillontents.com/assets/backyard-wedding-setup.webp</image:loc></image:image><image:image><image:loc>https://dhillontents.com/assets/backyayd-20x20-wedding-setup.webp</image:loc></image:image><image:image><image:loc>https://dhillontents.com/assets/brampton-wedding-setup.webp</image:loc></image:image><image:image><image:loc>https://dhillontents.com/assets/double-20x40-drive-and-backyard-setup.webp</image:loc></image:image><image:image><image:loc>https://dhillontents.com/assets/farmers-market-tent-setup.webp</image:loc></image:image><image:image><image:loc>https://dhillontents.com/assets/wedding-setup.webp</image:loc></image:image><image:image><image:loc>https://dhillontents.com/assets/10x10-popup-setup.webp</image:loc></image:image></url>
   <url><loc>https://dhillontents.com/about.html</loc></url>
   <url><loc>https://dhillontents.com/faq.html</loc></url>
   <url><loc>https://dhillontents.com/contact.html</loc></url>
@@ -19,4 +19,9 @@
   <url><loc>https://dhillontents.com/vaughan-tent-rentals.html</loc></url>
   <url><loc>https://dhillontents.com/gta-tent-rentals.html</loc></url>
   <url><loc>https://dhillontents.com/toronto-tent-rentals.html</loc></url>
+  <url><loc>https://dhillontents.com/backyard-tent-rentals-brampton.html</loc></url>
+  <url><loc>https://dhillontents.com/party-tent-rentals.html</loc></url>
+  <url><loc>https://dhillontents.com/tent-rental-prices.html</loc></url>
+  <url><loc>https://dhillontents.com/tent-size-guide.html</loc></url>
+  <url><loc>https://dhillontents.com/rental-guides.html</loc></url>
 </urlset>

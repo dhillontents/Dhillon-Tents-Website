@@ -1,0 +1,7 @@
+.gallery-breadcrumb{font-size:.875rem;margin-bottom:22px;color:#586972}
+.gallery-breadcrumb a,.gallery-intro a,.gallery-locations a{color:#173b49;text-decoration:underline;text-underline-offset:3px}
+.gallery-intro{max-width:70ch;margin-top:20px}
+.gallery-next .lede{max-width:68ch;margin:20px 0 28px}
+.gallery-next .path-grid h3{font-size:1.4rem}
+.gallery-locations{max-width:80ch;margin:28px 0;line-height:1.8;color:#586972}
+@media(max-width:700px){.gallery-next .path-grid>a{padding:24px 16px}}
